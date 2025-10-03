@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <title>Login - Racing Motors</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="login-container">
+    <h1>Login</h1>
+    <form id="loginForm">
+      <label for="username">Usuário</label>
+      <input type="text" id="username" name="username" placeholder="Digite seu usuário" required />
+      
+      <label for="password">Senha</label>
+      <input type="password" id="password" name="password" placeholder="Digite sua senha" required />
+      
+      <button type="submit" class="btn full">Entrar</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const username = document.getElementById('username').value.trim();
+      window.location.href = `perfil.html?username=${encodeURIComponent(username)}`;
+    });
+  </script>
+</body>
+</html>
+
+
+
+
+
+

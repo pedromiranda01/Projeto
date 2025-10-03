@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <title>Perfil do Usuário - Racing Motors</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="profile-container">
+    <h1>Bem-vindo(a), <span id="usernameDisplay"></span>!</h1>
+    <p>Você está logado no sistema da Racing Motors.</p>
+    <a href="index.html" class="btn">Voltar para a página inicial</a>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const username = params.get('username') || 'Usuário';
+    document.getElementById('usernameDisplay').textContent = username;
+  </script>
+</body>
+</html>
+
+
+
+
